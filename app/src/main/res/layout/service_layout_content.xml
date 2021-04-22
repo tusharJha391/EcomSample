@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardBackgroundColor="#E6E6E6"
+    card_view:cardCornerRadius="8dp"
+    android:layout_margin="15dp"
+    card_view:cardElevation="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/name_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dheeraj Kumar"
+            android:layout_gravity="start"
+            android:textSize="16sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <ImageView
+            android:id="@+id/img_service"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/engineer"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/address_serviceman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:text="Hansraj Gupta Marg, Hemkunt Colony, Greater Kailash, New Delhi, Delhi 110048, India"
+            android:layout_below="@id/name_service"
+            android:layout_toStartOf="@+id/img_service"/>
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/serviceman_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@id/address_serviceman"
+            android:rating="4.5"/>
+        <TextView
+            android:id="@+id/rating_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/serviceman_rating"
+            android:layout_below="@+id/address_serviceman"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:textSize="14sp"
+            android:text="4.5"
+            android:textColor="@android:color/holo_green_dark"/>
+
+        <ImageView
+            android:id="@+id/phone_num"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_action_add_phone"
+            android:layout_below="@id/img_service"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/what_customers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/serviceman_rating"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:text="What our customers say" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:layout_below="@id/what_customers"
+            android:background="@drawable/selector_button"
+            android:text="Professional"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/button1"
+            android:layout_below="@id/what_customers"
+            android:text="Hard Working"
+            android:background="@drawable/selector_button"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/button2"
+            android:layout_below="@+id/what_customers"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/selector_button"
+            android:text="Punctual"/>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pic_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FFFF"
+        android:src="@drawable/image_profile_review"/>
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/pic_user"
+        android:layout_marginStart="10dp"
+        android:text="Jacob Martin"
+        android:textSize="16sp"
+        android:textColor="@color/gen_black"/>
+    <TextView
+        android:id="@+id/time_of_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_user_name"
+        android:layout_toEndOf="@id/pic_user"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:text="Mar 15, 2018 04:52 PM"/>
+    <android.support.v7.widget.AppCompatRatingBar
+        android:id="@+id/rating_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:rating="5"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:progressTint="@color/yellow"/>
+    <TextView
+        android:id="@+id/review_from_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/time_of_review"
+        android:layout_toEndOf="@id/pic_user"
+        android:textStyle="normal"
+        android:text="Great buy! Perfect for everyday use."/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/review_from_user"
+        android:background="@color/grey_light"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>

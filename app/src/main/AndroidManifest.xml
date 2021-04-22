@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.allandroidprojects.sampleecomapp">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" /> <!-- Below permissions are needed for Personal Assistant app/commands -->
+    <uses-feature
+        android:name="android.permission.CAMERA"
+        android:required="false" />
+    <uses-feature
+        android:name="android.permission.CALL_PHONE"
+        android:required="false" />
+    <uses-feature
+        android:name="android.permission.SEND_SMS"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".startup.FrescoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_bag"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.allandroidprojects.ecomsample.MyService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".startup.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".options.SearchResultsActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAz-REH4pij_z7BEk_inoa03CUaa7K_-CI" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="OnlineMaps.Key"
+            android:value="JYJURXgv7G92ANHcpfLhe3x03DUJZp36" />
+        <meta-data
+            android:name="OnlineTraffic.Key"
+            android:value="JYJURXgv7G92ANHcpfLhe3x03DUJZp36" />
+        <meta-data
+            android:name="OnlineSearch.Key"
+            android:value="JYJURXgv7G92ANHcpfLhe3x03DUJZp36" />
+        <meta-data
+            android:name="OnlineRouting.Key"
+            android:value="JYJURXgv7G92ANHcpfLhe3x03DUJZp36" />
+
+        <activity
+            android:name=".startup.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".startup.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".fragments.ViewPagerActivity" />
+        <activity android:name=".product.ItemDetailsActivity" />
+        <activity
+            android:name=".options.WishlistActivity"
+            android:label="@string/my_wishlist" />
+        <activity
+            android:name=".options.CartListActivity"
+            android:label="@string/my_cart"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name=".options.SearchResultActivity">
+
+            <!-- to identify this activity as "searchable.xml" -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="Y9epLQEwCLnAynLcV1eD" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="K2qMnNeRfQSwp565GfHr1g" />
+
+        <activity android:name=".miscellaneous.EmptyActivity" />
+        <activity android:name=".miscellaneous.ImageSliderActivity" />
+        <activity android:name=".miscellaneous.CategoriesActivity" />
+        <activity android:name=".miscellaneous.MapActivity" />
+        <activity
+            android:name=".miscellaneous.GoogleMapActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name=".miscellaneous.GridView_categories" />
+        <activity android:name=".miscellaneous.GoogleActivityShop" />
+        <activity android:name=".miscellaneous.ShopRecyclerView" />
+        <activity
+            android:name=".miscellaneous.HereMapActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name=".ibmwatson.ChatBotActivity" />
+        <activity
+            android:name=".botlibre.MainActivityBotLIbre"
+            android:allowBackup="true"
+            android:theme="@style/AppTheme_botlibre" />
+        <activity android:name=".botlibre.BotActivity" />
+        <activity android:name=".botlibre.ChatActivity" />
+        <activity android:name=".botlibre.CreateUserActivity" />
+        <activity android:name=".botlibre.LoginActivity" />
+        <activity android:name=".botlibre.EditUserActivity" />
+        <activity android:name=".botlibre.ViewUserActivity" />
+        <activity android:name=".botlibre.ImageActivity" />
+        <activity android:name=".botlibre.MicConfiguration" />
+        <activity android:name=".authentication.SignInActivity" />
+        <activity android:name=".authentication.SignUpActivity" />
+        <activity android:name=".miscellaneous.GridViewImageTextActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".miscellaneous.Collasping"
+            android:theme="@style/NoActionBarTheme" />
+    </application>
+
+</manifest>

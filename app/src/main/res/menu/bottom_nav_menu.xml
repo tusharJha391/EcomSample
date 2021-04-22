@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_bottom_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_black_16dp"
+        android:title="Home"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/nav_bottom_categories"
+        android:enabled="true"
+        android:icon="@drawable/ic_apps_black_16dp"
+        android:title="Categories"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/nav_bottom_offers"
+        android:enabled="true"
+        android:icon="@drawable/ic_local_offer_black_16dp"
+        android:title="Offers"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/action_location"
+        android:enabled="true"
+        android:icon="@drawable/ic_search_black_16dp"
+        android:title="Search"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/action_lets_chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat_name"
+        android:title="Chat"
+        app:showAsAction="withText" />
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.5"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:elevation="30dp"
+    android:background="@color/gen_black"
+    android:visibility="visible">
+    <TextView android:id="@+id/text_action_bottom1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/gen_white"
+        android:text="Rs 8,750"
+        android:textSize="14dp"
+        android:textColor="@color/gen_black"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView android:id="@+id/text_action_bottom2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:text="PAYMENT"
+        android:textSize="14dp"
+        android:textColor="@color/gen_white"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_container"
+    android:weightSum="3">
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1.6"
+        card_view:cardCornerRadius="5.0dip"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/text_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dgrey"
+                    android:textStyle="bold"
+                    android:layout_marginStart="30dp"
+                    android:layout_alignParentStart="true"
+                    android:text="Digital Store"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/shop_address_short"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Noida , U.P."
+                    android:layout_marginEnd="30dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/shop_image_large"
+                android:src="@drawable/electronics_shop"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/shop_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="13sp"
+                android:layout_weight="1"
+                android:text="This shop is all about quality and great services. The electronics available in the shop ranges from laptops, mobiles, desktops, home appliances, etc."/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1.4"
+        card_view:cardCornerRadius="5.0dip"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:id="@+id/text_shop_name_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dgrey"
+                    android:textStyle="bold"
+                    android:layout_marginStart="30dp"
+                    android:layout_alignParentStart="true"
+                    android:text="Location"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/placeholderpointer"
+                    android:drawablePadding="5dp"/>
+                <TextView
+                    android:id="@+id/shop_address_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="100 m"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dgrey"
+                    android:layout_marginEnd="30dp"
+                    android:drawableLeft="@drawable/road"
+                    android:drawablePadding="5dp"/>
+
+            </RelativeLayout>
+
+
+                <fragment
+                    android:id="@+id/map_fragment"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent" />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
